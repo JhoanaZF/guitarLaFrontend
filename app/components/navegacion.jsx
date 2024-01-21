@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@remix-run/react";
 
 const Navegacion = () => {
-    const location = useLocation();
+  const location = useLocation();
 
   return (
     <nav className='navegacion'>

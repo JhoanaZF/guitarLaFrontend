@@ -16,6 +16,7 @@ export function links() {
     { rel: "preload", href: imagen, as: "image" },
   ];
 }
+
 const Nosotros = () => {
   return (
     <main className='contenedor nosotros'>
