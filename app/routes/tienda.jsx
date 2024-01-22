@@ -1,14 +1,12 @@
 export async function loader() {
-  const respuesta = fetch(
-    "http://localhost:1337/api/guitarras?populate=imagen"
-  );
+  const respuesta = fetch("");
   const resultado = await respuesta.json();
   console.log(resultado);
   return {};
 }
 
 const Tienda = () => {
-  return <div>tienda</div>;
+  return <div>PRUEBA</div>;
 };
 
 export default Tienda;
