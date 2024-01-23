@@ -4,7 +4,8 @@ import Guitarra from "~/components/guitarra";
 
 export async function loader() {
   const guitarras = await getGuitarras();
-  return guitarras;
+  console.log({ guitarras });
+  return guitarras.data;
 }
 
 const Tienda = () => {
@@ -12,12 +13,12 @@ const Tienda = () => {
   return (
     <main className='conenedor'>
       <h2 className='heading'>Nuestra Colección</h2>
-      {guitarras.length && (
+      {guitarras?.length && (
         <div className='guitarras-grid'>
           {guitarras.map((guitarra) => (
             <Guitarra
-              key={guitarra}
-              guitarra={guitarra}
+              key={guitarra?.id}
+              guitarra={guitarra?.attributes}
             />
           ))}
         </div>
