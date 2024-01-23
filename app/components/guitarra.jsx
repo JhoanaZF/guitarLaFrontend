@@ -14,8 +14,8 @@ const Guitarra = ({ guitarra }) => {
       />
       <div className='contenido'>
         <h3>{nombre}</h3>
-        <p>{texto}</p>
-        <p>${precio}</p>
+        <p className='descripcion'>{texto}</p>
+        <p className='precio'>${precio}</p>
         <Link
           className='enlace'
           to={`/guitarras/${url}`}>
