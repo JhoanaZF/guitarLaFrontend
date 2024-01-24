@@ -9,4 +9,11 @@ async function getGuitarras() {
   return resultado;
 }
 
-export default getGuitarras;
+const getGuitarra = async (url) => {
+  const respuesta = await fetch(
+    `${process.env.API_URL}/guitarras?filters[url]=${url}populate=imagen`
+  );
+  return respuesta.json();
+};
+
+export default { getGuitarras, getGuitarra };
