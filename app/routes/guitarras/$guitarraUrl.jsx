@@ -9,8 +9,9 @@ export const loader = async ({ params }) => {
 
 const Guitarra = () => {
   const guitarra = useLoaderData();
-  console.log(guitarra.data[0].attributes.nombre);
-  return <div>$guitarrasUrl</div>;
+  const { nombre, descripcion, imagen, precio } = guitarra.data[0].attributes;
+  // console.log(guitarra.data[0].attributes.nombre);
+  return <main className='contenedor guitarra'>$guitarrasUrl</main>;
 };
 
 export default Guitarra;
